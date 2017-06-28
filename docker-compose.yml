@@ -1,0 +1,23 @@
+version: "2"
+
+services:
+  nginx:
+    image: nginx:latest
+    environment:
+      NGINX_SERVER_ROOT: /var/www/html
+    volumes:
+      - data-volume:/var/www/html
+      - ./:/var/www/html
+      
+    ports:
+      - "9999:80" 
+volumes:
+  data-volume:
+
+
+
+
+
+
+
+
